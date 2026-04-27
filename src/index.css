@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 97%;
+    --foreground: 25 20% 15%;
+
+    --card: 40 30% 95%;
+    --card-foreground: 25 20% 15%;
+
+    --popover: 40 33% 97%;
+    --popover-foreground: 25 20% 15%;
+
+    --primary: 152 45% 35%;
+    --primary-foreground: 40 33% 97%;
+
+    --secondary: 200 55% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 35 25% 90%;
+    --muted-foreground: 25 10% 45%;
+
+    --accent: 30 60% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 152 45% 35%;
+
+    --radius: 0.75rem;
+
+    --earth-brown: 25 35% 30%;
+    --earth-tan: 35 40% 75%;
+    --water-blue: 200 55% 45%;
+    --water-light: 200 60% 92%;
+    --leaf-green: 152 45% 35%;
+    --leaf-light: 152 40% 90%;
+    --warm-sand: 40 45% 88%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply px-4 py-16 md:px-8 md:py-24 lg:px-16;
+  }
+
+  .animate-on-scroll {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  .animate-on-scroll.visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
